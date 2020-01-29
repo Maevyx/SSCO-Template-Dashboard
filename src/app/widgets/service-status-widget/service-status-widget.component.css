@@ -1,0 +1,58 @@
+.led-container {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 200px;
+    min-height: 125px;
+    border: 2px solid #000;
+}
+
+.service-box {
+    width: 100%;
+    float: left;
+    font-size: 20px;
+}
+.led-label {
+  width: 50%;
+  float: left;
+}
+
+.led-light {
+  width: 50%;
+  float: right;
+}
+
+.led-green {
+    margin: auto;
+    width: 24px;
+    height: 24px;
+    background-color: #ABFF00;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
+  }
+
+  .led-yellow {
+    margin: auto;
+    width: 24px;
+    height: 24px;
+    background-color: #FF0;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 12px;
+  }
+
+  .led-red {
+    margin: auto;
+    width: 24px;
+    height: 24px;
+    background-color: #F00;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+  }
+
+  .btn-container {
+    width: 100%;
+  }
+
+  .btn {
+    margin: 10px auto 0px auto;
+  }
+  

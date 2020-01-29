@@ -1,0 +1,122 @@
+<!--Topnav-->
+<nav class="ssco-topnav navbar navbar-expand navbar-dark">
+  <!--Dashboard-Branding-->
+  <a class="navbar-brand" routerLink="/dashboard" routerLinkActive="active"><i class="fa fa-cubes fa-md"></i> SSCO</a>
+  <!--Sidenav-Toggle-Button-->
+  <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+  </button>
+  <!--Navbar-Search-->
+  <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    <div class="input-group">
+      <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+  </form>
+  <!--Right-Navbar-Section-->
+  <ul class="navbar-nav ml-auto ml-md-0">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-user fa-lg"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+        <a class="dropdown-item" href="#">Settings</a>
+        <a class="dropdown-item" href="#">Activity Log</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="login.html">Logout</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!--Sidenav-and-Main-Content-->
+<div id="content-wrapper">
+  <!--Sidenav-->
+  <div id="content-sidenav">
+    <nav class="ssco-sidenav accordion ssco-sidenav-dark" id="sidenavAccordion">
+      <div class="ssco-sidenav-menu">
+        <div class="nav">
+          <!--Menu-Item-Dashboard-->
+          <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+              <div class="ssco-nav-link-icon">
+                  <i class="fa fa-tachometer fa-lg"></i>
+              </div>Dashboard
+          </a>
+          <!--Menu-Item-Tools-->
+          <a class="nav-link" routerLink="/tools" routerLinkActive="active">
+              <div class="ssco-nav-link-icon">
+                  <i class="fa fa-server fa-lg"></i>
+              </div>Tools
+          </a>
+          <!--Menu-Item-Watchdog-->
+          <a class="nav-link" routerLink="/watchdog" routerLinkActive="active">
+              <div class="ssco-nav-link-icon">
+                  <i class="fa fa-paw fa-lg"></i>
+              </div>WatchDog
+          </a>
+          <div class="ssco-sidenav-menu-heading">Pages</div>
+          <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+              <nav class="ssco-sidenav-menu-nested nav"><a class="nav-link" href="layout-static.html">Static Navigation</a><a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav>
+          </div>
+          <!--Menu-Item-Documentation-and-Collapsed-Pages-->
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+              <div class="ssco-nav-link-icon"><i class="fa fa-book-open fa-lg"></i></div>
+              Documentation
+            <div class="ssco-sidenav-collapse-arrow"><i class="fa fa-angle-down fa-lg"></i></div></a>
+          <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+            <nav class="ssco-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                  Authentication
+                  <div class="ssco-sidenav-collapse-arrow"><i class="fa fa-angle-down fa-lg"></i></div>
+              </a>
+              <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                  <nav class="ssco-sidenav-menu-nested nav">
+                      <a class="nav-link" href="login.html">Login</a>
+                      <a class="nav-link" href="register.html">Register</a>
+                      <a class="nav-link" href="password.html">Forgot Password</a>
+                  </nav>
+              </div>
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                  Error
+                  <div class="ssco-sidenav-collapse-arrow"><i class="fa fa-angle-down fa-lg"></i></div>
+              </a>
+              <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                  <nav class="ssco-sidenav-menu-nested nav"><a class="nav-link" href="401.html">401 Page</a><a class="nav-link" href="404.html">404 Page</a><a class="nav-link" href="500.html">500 Page</a></nav>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!--Sidenav-Footer-->
+      <div class="ssco-sidenav-footer">
+          <div class="small">Logged in as:</div>
+          Admin
+      </div>
+    </nav>
+  </div>
+  
+  <!--Main-Content-->
+  <div id="content-modules">
+    <main>
+      <!--Router-Outlet-->
+      <router-outlet></router-outlet>
+    </main>
+    <!--Footer-->
+    <footer class="py-4 bg-light mt-auto">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between small">
+                <div class="text-muted">Copyright &copy; Your Website 2019</div>
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    &middot;
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </div>
+</div>
+
+<script src="js/scripts.js"></script>
